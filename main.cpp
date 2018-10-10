@@ -29,7 +29,7 @@ int main()
       cin>>NewItem;
       list.push_back(NewItem);
     }
-    if(input == 'd' || input == 'D' && list.size()>0)
+    if((input == 'd' || input == 'D') && list.size()>0)
     {
       list.pop_back();
       cout<<NewItem<<" was deleted from the list.\n";
