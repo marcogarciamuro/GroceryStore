@@ -16,6 +16,10 @@ int main()
     cout<<"\n==GROCERY LIST MANAGER==";
     cout<<"\nEnter your choice: ";
     cout<<"\n (A)dd an item";
+    if(list.size()>0)
+    {
+      cout<<"\n (D)elete last item";
+    }
     cout<<"\n (Q)uit";
     cout<<"\nYour choice (A/Q): ";
     cin>>input;
@@ -24,6 +28,11 @@ int main()
       cout<<"What is the item?\n";
       cin>>NewItem;
       list.push_back(NewItem);
+    }
+    if(input == 'd' || input == 'D')
+    {
+      list.pop_back();
+      cout<<NewItem<<" was deleted from the list.\n";
     }
   } while(input!='q' && input!='Q');
 
